@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg-color: #121212;        /* Fundo principal */
+    --bg-secondary: #1E1E1E;    /* Fundos internos, sections, cards */
+    --text-color: #9A9A9C;      /* Texto principal */
+    --text-muted: #B3B3B3;      /* Texto secundário */
+    --accent-color: #4F46E5;    /* Destaques, links, botões (azul-violeta) */
+    --accent-hover: #6366F1;    /* Quando passa o mouse */
+    --border-color: #2A2A2A;    /* Linhas ou bordas discretas */
+    --theme-color: #F1F1F1;
+    --primary-color: #F1F1F1;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    list-style: none;
+}
+
+body {
+    background: var(--bg-color);
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+i {
+    color: var(--theme-color);
+}
+
+.header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1rem;    
+}
+
+.header__brand .brand__logo {
+    width: 52px;
+    height: inherit;
+    border-radius: 50%;
+}
+
+
+#toggleTheme {
+    font-size: 1.5rem;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    background: var(--bg-color);
+}
+
+.menu__item {
+    width: 100%;
+}
+
+.menu--mobile {
+    width: 100vw;
+    justify-content: space-between;
+    border-top: 1px solid var(--border-color);
+    padding-top: .5rem;
+    position: fixed;
+    bottom: 0;
+}
+
+.menu--mobile .menu__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    gap: .2rem;
+}
+
+.menu__link.active .menu__icon, 
+.menu__link.active .menu__text {
+    color: var(--primary-color);
+    font-weight: 600;
+} 
+
+.menu__icon {
+    font-size: 1.5rem;
+}
+
+.menu__text {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+.menu__icon, .menu__text {
+    color: var(--text-color);
+}
+
+@media (min-width: 768px) {
+    .menu--mobile {
+        display: none;
+    }
+}
