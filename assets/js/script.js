@@ -1,3 +1,4 @@
+// Botão troca de tema dark/light
 const toggleTheme = document.getElementById("toggleTheme");
 const rootHtml = document.documentElement
 
@@ -11,3 +12,23 @@ function changeTheme() {
 }
 
 toggleTheme.addEventListener('click', changeTheme);
+
+// cosntante para pegar 'entrada na tela' (quando usuário rolar a página e chegar na section)
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Animar apenas uma vez
+        }
+    });
+}, {
+    threshold: 0.5
+});
+
+// 'olhar' o titulo (nesse caso o h2)
+const title = document.querySelector('.skills__title');
+observer.observe(title);
+
+// 'olhar' cada imagem (nessa caso nossas skills ao lado do h2)
+const skillsItems = document.querySelectorAll('.skills__item');
+skillsItems.forEach(item => observer.observe(item));
