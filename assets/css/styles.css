@@ -73,6 +73,12 @@ img {
     border-radius: .25rem;
 }
 
+#home {
+    position: relative;
+    top: -89px;
+    height: 0;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -360,6 +366,7 @@ main {
 
 .contact .contact--social li:hover {
     color: var(--primary-color);
+    font-weight: 600;
     cursor: pointer;
 }
 
@@ -576,7 +583,7 @@ footer P {
     }
 
     .skills {
-        padding: 6rem 15rem 3rem;
+        padding: 6rem 21rem 6rem;
     }
 
     .skills__title span {
@@ -671,4 +678,12 @@ footer P {
         margin-left: 2rem;
     }
 
+}
+
+@media (min-width: 1550px) {
+
+    .skills {
+        padding: 6rem 35rem 6rem;
+    }
+    
 }
