@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +11,38 @@
 </head>
 <body>
     <header class="header">
+        <nav class="header__nav">
+        <ul class="menu menu--principal">
+            <li class="menu__item">
+                <a class="menu__link active" href="#home">
+                    <span class="menu__text">Home</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#projetos">
+                    <span class="menu__text">Projetos</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#sobre">
+                    <span class="menu__text">Sobre</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#contato">
+                    <span class="menu__text">Contato</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
         <div class="header__brand">
             <img class="brand__logo" src="assets/images/width_800.jpg" alt="Logo MA">
         </div>
-        <i id="toggleTheme" class="bi bi-sun"></i>
+        <div class="header__toggle"> 
+            <i id="toggleTheme" class="bi bi-sun"></i>
+        </div>
     </header>
-    <nav>
+    <nav class="nav--mobile">
         <ul class="menu menu--mobile">
             <li class="menu__item">
                 <a class="menu__link active" href="#home">
@@ -44,7 +70,61 @@
             </li>
         </ul>
     </nav>
-    <h1>Michael Alan</h1>
-    
+    <main>
+        <div class="main__content1">
+            <h1><b>Código & Criatividade</b> para transformar ideias em soluções digitais.</h1>
+            <p>Michael Alan</p>
+            <p>
+                Desenvolvedor em formação apaixonado por criar com código. Estudando tecnologias como 
+                HTML, CSS, JavaScript e PHP, com foco em desenvolver soluções criativas e funcionais. 
+                Curioso por natureza, fã de música, jogos e inovação. Aberto a oportunidades como 
+                desenvolvedor front-end, back-end ou fullstack.
+            </p>
+            <ul class="menu menu--social">
+                <li>
+                    <a class="menu__link" href=""></a>
+                    <i class="bi bi-github"></i>
+                </li>
+                <li>
+                    <a class="menu__link" href=""></a>
+                    <i class="bi bi-linkedin"></i>
+                </li>
+                <li>
+                    <a class="menu__link" href=""></a>
+                    <i class="bi bi-instagram"></i>
+                </li>
+            </ul>
+            <button class="btn btn--primary">
+                <span>Ver Projetos</span>
+                <i class="bi bi-arrow-down-right"> </i>
+            </button>
+        </div>
+        <div class="main__content2">
+            <iframe src="https://www.youtube.com/embed/SD4zBZbebKw?si=_tYy24mO3z-33OtR&amp;start=11" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </main>
+    <section class="skills">
+        <h2>Conhecimento nas principais tecnologias do mercado</h2>
+        <ul class="skills__list">
+            <li class="skills__item">
+                <img class="skills__logo" src="assets/images/php.svg" alt="Logo PHP">
+            </li>
+             <li class="skills__item">
+                <img class="skills__logo" src="assets/images/html.svg" alt="Logo HTML 5">
+            </li>
+             <li class="skills__item">
+                <img class="skills__logo" src="assets/images/css.svg" alt="Logo CSS 3">
+            </li>
+             <li class="skills__item">
+                <img class="skills__logo" src="assets/images/mysql.svg" alt="Logo MySql">
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <p>
+            &copy; 2025 - <!-- aqui uma função para pegar ano atual -->. Todos os direitos reservados. Dev. <a href="#">Michael Alan</a>
+        </p>
+    </footer>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
