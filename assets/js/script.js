@@ -32,3 +32,11 @@ observer.observe(title);
 // 'olhar' cada imagem (nessa caso nossas skills ao lado do h2)
 const skillsItems = document.querySelectorAll('.skills__item');
 skillsItems.forEach(item => observer.observe(item));
+
+// função para pegar ano atual dinâmica
+function setCurrentYear() {
+    const year = new Date().getFullYear();
+    document.getElementById('year').textContent = year;
+}
+
+setCurrentYear();

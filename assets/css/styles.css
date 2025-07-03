@@ -310,20 +310,72 @@ main {
 }
 
 /* sobre mim*/
-
-.myself {
+.about__content {
     background: var(--border-color);
     margin: 16px auto;
     padding: 16px;
 }
 
-.myself__image img {
-    width: 100%;
-    max-width: 152px;
-    height: auto;
+.about__image {
     border-radius: .25rem;
     margin: 16px;
+}
 
+.about__image img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+.contact__content {    
+    display: flex;
+    flex-direction: column;    
+    width: auto;
+    min-height: 283px;
+    padding: 2rem;
+    align-items: center;
+}
+
+.contact__content h2 {
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contact__content p {
+    margin-bottom: 1rem;
+}
+
+.contact .contact--social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.contact .contact--social i {
+    font-size: 1.25rem;
+    font-weight: 200;
+}
+
+.contact .contact--social li:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.contact__text {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.btn--contact {
+    font-size: 20px;
+    padding: 1rem;
+    margin-top: 2rem;
+    background: var(--border-color);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    max-width: 344px;
 }
 
 footer {
@@ -486,6 +538,19 @@ footer P {
 
     .projects--reverse .projects__title {
         order: 1;
+    }
+
+    .contact__title {
+        font-size: 42px;
+        font-weight: 400;
+    }
+
+    .contact__text {
+        font-size: 28px;
+    }
+
+    .contact .contact--social li{
+        font-size: 28px;
     }
 }
 
