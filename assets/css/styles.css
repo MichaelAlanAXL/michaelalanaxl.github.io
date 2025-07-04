@@ -287,12 +287,10 @@ main {
     padding: 2rem 1rem;
 }
 
-/* ALTERAR O REVERSE AQUI */
 .projects--reverse {
     background: var(--border-color);
     width: 100%;
 }
-/* ALTERAR O REVERSE AQUI */
 
 .projects__title h3 {
     text-transform: capitalize;
@@ -518,6 +516,7 @@ footer P {
 
     .title {
         font-size: 85px;
+        text-align: center;
     }
 
     .project {
@@ -550,13 +549,27 @@ footer P {
         margin: 0 auto;
     }
 
-    /* Reverse layout */
+    .projects--reverse {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        padding: 4rem 1rem 4rem 8rem;
+    }
+
     .projects--reverse .projects__container {
         direction: rtl;
     }
 
-    .projects--reverse .projects__container {
+    .projects--reverse .projects__container > * {
         direction: ltr;
+    }
+
+    .projects--reverse .projects__title {
+        justify-self: end;
+        text-align: right;
+    }
+
+    .projects--reverse .projects__image {
+        justify-self: start;
     }
 
     .contact__title {
@@ -591,11 +604,11 @@ footer P {
     }
 
     main {
-        padding: 7rem 15rem 3rem;
+        padding: 7rem 5rem 3rem;
     }
 
     .skills {
-        padding: 6rem 21rem 6rem;
+        padding: 6rem 16rem 6rem;
     }
 
     .skills__title span {
@@ -651,27 +664,10 @@ footer P {
     }
 
     .projects__image img {
-        max-width: 803px;
+        max-width: 650px;
         width: 100%;
         height: auto;
         margin: 0;
-    }
-
-    .projects--reverse .projects__container {
-        direction: rtl;
-    }
-
-    .projects--reverse .projects__container > * {
-        direction: ltr;
-    }
-
-    .projects--reverse .projects__title {
-        justify-self: end;
-        text-align: right;
-    }
-
-    .projects--reverse .projects__image {
-        justify-self: start;
     }
 
     .about__content {
