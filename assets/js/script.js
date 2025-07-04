@@ -68,16 +68,82 @@ function setCurrentYear() {
 
 setCurrentYear();
 
-fetch("./data/projetos.json")
-    .then(response => response.json())
+// adicionando dinamicamente meus projetos via JSON
+fetch("./assets/data/projetos.json")
+    .then(res => res.json())
     .then(projetos => {
-        const container = document.getElementById("");
+        const container = document.getElementById("projects-container");
 
-        projetos.forEach(projeto => {
-            const tituloElement = document.createElement("h3");
-            tituloElement.textContent = projeto.titulo;
-            tituloElement.ATTRIBUTE_NODE.classList.add("project-title");
-            container.appendChild(tituloElement);
+        projetos.forEach((projeto, index) => {
+            // wrapper geral do projeto
+            const project = document.createElement("div");
+            project.classList.add("project");
+
+            // Aplica reverse se for o segundo
+            if (index === 1) {
+                project.classList.add("projects--reverse");
+            }
+
+            const projectsContainer = document.createElement("div");
+            projectsContainer.classList.add("projects__container");
+
+            const imagem = document.createElement("img");
+            imagem.src = projeto.imagem;
+            imagem.alt = `Imagem do projeto ${projeto.titulo}`;
+            const wrapperImg = document.createElement("div");
+            wrapperImg.classList.add("projects__image");            
+            wrapperImg.appendChild(imagem);
+
+            const titulo = document.createElement("h3");
+            titulo.classList.add("projects__title");
+            titulo.textContent = projeto.titulo;
+
+            const descricao = document.createElement("p");
+            descricao.classList.add("projects__description");
+            descricao.textContent = projeto.descricao;
+
+            const lista = document.createElement("ul");
+            projeto.habilidades.forEach(habilidade => {
+                const item = document.createElement("li");
+                item.textContent = habilidade;
+                lista.appendChild(item);
+            });
+
+            // adiciona botões previa e repositório 
+            const botoesWrapper = document.createElement("div"); // Cria a div
+            botoesWrapper.classList.add("card__buttons"); // Depois cria a classe dela
+            projeto.botoes.forEach(botao => {
+                const button = document.createElement("a");
+                button.href = botao.link; // Cria elemento href
+                button.target = "_blank"; 
+                button.className = botao.classe; // pega o nome da classe e adiciona no elemento button
+
+                const span = document.createElement("span");
+                span.textContent = botao.texto; // Pega o nome do texto do botão e joga dentro da tag <span>
+                button.appendChild(span);
+
+                if(botao.icone) {
+                    const icone = document.createElement("i"); // Se existir icone no botão => cria elemento
+                    icone.className = botao.icone; // Adiciona o nome da classe do ícone 
+                    button.appendChild(icone);
+                }
+
+                botoesWrapper.appendChild(button);
+            });
+
+            const wrapperTexto = document.createElement("div");
+            wrapperTexto.classList.add("projects__title");
+            wrapperTexto.appendChild(titulo);
+            wrapperTexto.appendChild(descricao);
+            wrapperTexto.appendChild(lista);
+            wrapperTexto.appendChild(botoesWrapper);
+
+            projectsContainer.appendChild(wrapperImg);
+            projectsContainer.appendChild(wrapperTexto);
+
+            project.appendChild(projectsContainer);
+
+            container.appendChild(project);
         });
     })
-    .catch(error => console.error("Erro ao carregar JSON:", error));
+    .catch(err => console.error("Erro ao carregar JSON:", err));

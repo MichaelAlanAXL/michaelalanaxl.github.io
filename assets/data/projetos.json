@@ -1,5 +1,77 @@
 [
-    { "titulo" : "Projeto 1" },
-    { "titulo" : "Projeto 2" },
-    { "titulo" : "Projeto 3" },
+    { 
+        "titulo" : "Projeto e-commerce",
+        "descricao" : "Projeto e-commerce com painel de administração, integração com APIs de frete e pagamento.",
+        "imagem" : "assets/images/image_ecommerce.png",
+        "habilidades" : [
+            "Banco de dados relacional",
+            "CRUD com PHP 7",
+            "API dos Correios (frete)",
+            "Integração com PagSeguro/PayPal",
+            "Painel administrativo"
+        ],
+        "botoes" : [
+            {
+                "texto" : "Prévia",
+                "link" : "#",
+                "classe" : "btn btn--primary",
+                "icone" : "bi bi-arrow-up-right"
+            },
+            {
+                "texto" : "Repositório",
+                "link" : "#",
+                "classe" : "btn",
+                "icone" : ""
+            }
+        ]
+    },
+    { 
+        "titulo" : "Discord Landing Page Clone",
+        "descricao" : "Página inspirada no Discord, feita para praticar HTML e CSS com foco em layout responsivo.",
+        "imagem" : "assets/images/discord_clone.png",
+        "habilidades" : [
+            "HTML semântico",
+            "CSS responsivo",
+            "Layout mobile-first",
+            "Estilo visual semelhante ao original"
+        ],
+        "botoes" : [
+            {
+                "texto" : "Prévia",
+                "link" : "#",
+                "classe" : "btn btn--primary",
+                "icone" : "bi bi-arrow-up-right"
+            },
+            {
+                "texto" : "Repositório",
+                "link" : "#",
+                "classe" : "btn",
+                "icone" : ""
+            }
+        ]
+    },
+    { 
+        "titulo" : "Primeira Landing Page",
+        "descricao" : "Landing page criada em um desafio da DIO usando apenas HTML e CSS.",
+        "imagem" : "assets/images/landing_page_dio.png",
+        "habilidades" : [
+            "Transparência em imagens/textos",
+            "Imagens fixas no fundo",
+            "Posicionamento com CSS"
+        ],
+        "botoes" : [
+            {
+                "texto" : "Prévia",
+                "link" : "#",
+                "classe" : "btn btn--primary",
+                "icone" : "bi bi-arrow-up-right"
+            },
+            {
+                "texto" : "Repositório",
+                "link" : "#",
+                "classe" : "btn",
+                "icone" : ""
+            }
+        ]
+    }
 ]
