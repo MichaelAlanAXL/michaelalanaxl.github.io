@@ -164,7 +164,17 @@ img {
 }
 
 .menu--social {
+    font-size: 2rem;
     gap: 1rem;
+}
+
+.menu--social i {
+    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.menu--social i:hover {
+    transform: scale(1.2);
 }
 
 .btn {
@@ -288,13 +298,16 @@ main {
 }
 
 .projects--reverse {
-    background: var(--border-color);
-    width: 100%;
+    background: var(--border-color);    
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 4rem 1rem 4rem 8rem;
 }
 
 .projects__title h3 {
     text-transform: capitalize;
     margin-bottom: 8px;
+    font-size: 24px;
 }
 
 .projects__title p {
@@ -322,21 +335,27 @@ main {
 }
 
 /* sobre mim*/
-.about__content {
+.title {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.about {
     background: var(--border-color);
-    margin: 16px auto;
-    padding: 16px;
+    padding: 2rem;
+}
+
+.about__content {
+    display: flex;
+    margin: 1rem 7rem;
 }
 
 .about__image {
-    border-radius: .25rem;
-    margin: 16px;
-}
-
-.about__image img {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
+    float: left;
+    width: 100px;
+    margin: 0 2rem 1rem 0;
+    border-radius: 8px;
+    margin-top: 1rem;
 }
 
 .contact__content {    
@@ -379,6 +398,7 @@ main {
 .contact__text {
     text-align: center;
     margin-bottom: 1rem;
+    font-size: 1rem;
 }
 
 .btn--contact {
@@ -465,32 +485,16 @@ footer P {
     }
 
     /* sobre mim min-width 768px */
-    .about {
-        background: var(--border-color);
-        padding: 4rem 12rem 4rem 1rem;
-    }
     .about__content {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);        
+        display: flex;
+        justify-content: center;
         align-items: center;
-        gap: 1rem;
-
+        gap: 2rem;
+        padding: 2rem;
     }
 
     .about__image {
         justify-self: end;
-    }
-    .about__content img {
-        max-width: 200px;
-        width: 100%;
-        height: auto;
-        justify-self: start;
-
-    }
-
-    .about__content .about__text {
-        padding: 2rem 1rem;
-        align-self: center;
     }
 }
 
@@ -515,8 +519,7 @@ footer P {
     }
 
     .title {
-        font-size: 85px;
-        text-align: center;
+        font-size: 3rem;
     }
 
     .project {
@@ -549,12 +552,6 @@ footer P {
         margin: 0 auto;
     }
 
-    .projects--reverse {
-        width: 100vw;
-        margin-left: calc(-50vw + 50%);
-        padding: 4rem 1rem 4rem 8rem;
-    }
-
     .projects--reverse .projects__container {
         direction: rtl;
     }
@@ -565,7 +562,7 @@ footer P {
 
     .projects--reverse .projects__title {
         justify-self: end;
-        text-align: right;
+        text-align: left;
     }
 
     .projects--reverse .projects__image {
@@ -575,10 +572,6 @@ footer P {
     .contact__title {
         font-size: 42px;
         font-weight: 400;
-    }
-
-    .contact__text {
-        font-size: 28px;
     }
 
     .contact .contact--social li{
@@ -668,23 +661,6 @@ footer P {
         width: 100%;
         height: auto;
         margin: 0;
-    }
-
-    .about__content {
-        display: grid;        
-        margin-bottom: 2rem;                
-    }
-
-    .about__image img {
-        max-width: 300px;
-        width: 100%;
-        justify-self: center;
-        margin-right: 2rem;
-    }
-
-    .about__text {
-        font-size: 22px;
-        margin-left: 2rem;
     }
 
 }

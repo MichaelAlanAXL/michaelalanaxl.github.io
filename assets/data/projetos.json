@@ -13,13 +13,13 @@
         "botoes" : [
             {
                 "texto" : "Prévia",
-                "link" : "#",
+                "link" : "https://github.com/MichaelAlanAXL/ecommerce",
                 "classe" : "btn btn--primary",
                 "icone" : "bi bi-arrow-up-right"
             },
             {
                 "texto" : "Repositório",
-                "link" : "#",
+                "link" : "https://github.com/MichaelAlanAXL/ecommerce",
                 "classe" : "btn",
                 "icone" : ""
             }
@@ -38,13 +38,13 @@
         "botoes" : [
             {
                 "texto" : "Prévia",
-                "link" : "#",
+                "link" : "https://michaelalanaxl.github.io/responsive-layout-discord/",
                 "classe" : "btn btn--primary",
                 "icone" : "bi bi-arrow-up-right"
             },
             {
                 "texto" : "Repositório",
-                "link" : "#",
+                "link" : "https://github.com/MichaelAlanAXL/responsive-layout-discord",
                 "classe" : "btn",
                 "icone" : ""
             }
@@ -62,13 +62,13 @@
         "botoes" : [
             {
                 "texto" : "Prévia",
-                "link" : "#",
+                "link" : "https://michaelalanaxl.github.io/desafio-trilha-css/",
                 "classe" : "btn btn--primary",
                 "icone" : "bi bi-arrow-up-right"
             },
             {
                 "texto" : "Repositório",
-                "link" : "#",
+                "link" : "https://github.com/MichaelAlanAXL/desafio-trilha-css",
                 "classe" : "btn",
                 "icone" : ""
             }
