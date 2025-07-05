@@ -51,14 +51,36 @@ observer.observe(title);
 const skillsItems = document.querySelectorAll('.skills__item');
 skillsItems.forEach(item => observer.observe(item));
 
-const menuLinks = document.querySelectorAll(".menu__link");
 
+// Alternar classe active dos menus
+const menuLinks = document.querySelectorAll(".menu__link");
 menuLinks.forEach(item => {
     item.addEventListener('click', () => {
         menuLinks.forEach(i => i.classList.remove("active"));
         item.classList.add("active");
-    })
-})
+    });
+});
+
+// Alternar a classe active conforme rola a página
+const sections = document.querySelectorAll("section[id]");
+window.addEventListener("scroll", () => {
+    let scrollY = window.pageYOffset;
+
+    sections.forEach(section => {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 70; // ajuste se header for fixo
+        const sectionId = section.getAttribute("id");
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            menuLinks.forEach(link => {
+                link.classList.remove("active");
+                if(link.getAttribute("href") === "#" + sectionId) {
+                    link.classList.add("active");
+                }
+            });
+        }
+    });
+});
 
 // função para pegar ano atual dinâmica
 function setCurrentYear() {
@@ -68,7 +90,7 @@ function setCurrentYear() {
 
 setCurrentYear();
 
-// adicionando dinamicamente meus projetos via JSON
+// adicionar dinamicamente meus projetos via JSON
 fetch("./assets/data/projetos.json")
     .then(res => res.json())
     .then(projetos => {

@@ -33,6 +33,9 @@
     list-style: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 body {
     background: var(--bg-color);
     font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
