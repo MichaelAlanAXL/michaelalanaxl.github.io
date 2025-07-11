@@ -102,7 +102,7 @@ fetch("./assets/data/projetos.json")
             project.classList.add("project");
 
             // Aplica reverse se for o segundo
-            if (index === 1) {
+            if (index % 2 !== 0) {
                 project.classList.add("projects--reverse");
             }
 

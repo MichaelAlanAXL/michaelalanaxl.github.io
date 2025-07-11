@@ -73,5 +73,31 @@
                 "icone" : ""
             }
         ]
-    }
+    },
+    {
+    "titulo": "Jogo Yu-Gi-Oh!",
+    "descricao": "Jogo web inspirado em Yu-Gi-Oh! com visual retrô utilizando a biblioteca RPGUI.",
+    "imagem": "assets/images/yugioh.png",
+    "habilidades": [
+        "HTML5 + CSS3",
+        "JavaScript (DOM e lógica de jogo)",
+        "Interface com RPGUI",
+        "Uso de eventos e manipulação de elementos"
+    ],
+    "botoes": [
+        {
+            "texto": "Prévia",
+            "link": "https://michaelalanaxl.github.io/javascript-yugioh-game/",
+            "classe": "btn btn--primary",
+            "icone": "bi bi-arrow-up-right"
+        },
+        {
+            "texto": "Repositório",
+            "link": "https://github.com/MichaelAlanAXL/javascript-yugioh-game",
+            "classe": "btn",
+            "icone": ""
+        }
+    ]
+}
+
 ]
