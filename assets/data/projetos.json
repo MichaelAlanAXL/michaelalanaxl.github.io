@@ -13,7 +13,7 @@
         "botoes" : [
             {
                 "texto" : "Prévia",
-                "link" : "https://github.com/MichaelAlanAXL/ecommerce",
+                "link" : "https://www.michaelti.com.br",
                 "classe" : "btn btn--primary",
                 "icone" : "bi bi-arrow-up-right"
             },
